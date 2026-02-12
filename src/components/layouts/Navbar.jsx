@@ -14,7 +14,7 @@ export default function Navbar() {
     );
   return (
     <div>
-        <div className="navbar bg-base-100 shadow-2xl ">
+        <div className="navbar bg-orange-50 shadow-lg">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,7 +22,7 @@ export default function Navbar() {
       </div>
     <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-base-200 rounded-box z-1 mt-3 w-52 p-2 shadow">
         {nav}
       </ul>
     </div>

@@ -4,11 +4,11 @@ import NavLink from '../buttons/NavLink'
 export default function Footer() {
   return (
     <div>
-       <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+       <footer className="footer footer-horizontal footer-center text-base-content p-10 border-t-2 border-orange-300">
   <nav className="grid grid-flow-col gap-4">
     <NavLink href={"/"} className="link link-hover">Home</NavLink>
     <NavLink href={"/services"} className="link link-hover">Services</NavLink>
-    <NavLink href={"/about"} className="link link-hover">About us</NavLink>
+    <NavLink href={"/about"} className="link link-hover">About</NavLink>    
     <NavLink href={"/contact"} className="link link-hover">Contact</NavLink>
   </nav>
   <nav>

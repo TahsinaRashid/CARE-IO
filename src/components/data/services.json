@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Baby Care Service",
+    "category": "baby",
+    "description": "Professional caregivers providing safe and loving care for infants and young children at home.",
+    "price_hour": 200,
+    "image": "https://i.postimg.cc/TYqLQjTQ/baby.jpg",
+    "features": [
+      "24/7 baby monitoring",
+      "Feeding and hygiene support",
+      "Trained and verified caregivers",
+      "Emergency assistance"
+    ]
+  },
+  {
+
+    "name": "Elderly Care Service",
+    "category": "elderly",
+    "description": "Dedicated caregivers to assist elderly individuals with daily activities, companionship, and health monitoring.",
+    "price_hour": 250,
+    "image": "https://i.postimg.cc/3rkk55YR/elderly-care-services-hand-drawn-cartoon-flat-illustration-with-caregiver-nursing-home-assisted-livi.jpg",
+    "features": [
+      "Medication reminders",
+      "Daily activity assistance",
+      "Mobility support",
+      "Companionship service"
+    ]
+  },
+  {
+
+    "name": "Sick People Care Service",
+    "category": "sick",
+    "description": "Professional home nursing and caregiving support for sick or recovering patients requiring continuous attention.",
+    "price_hour": 300,
+    "image": "https://i.postimg.cc/y6DyfbGT/sick.jpg",
+    "features": [
+      "Post-surgery care",
+      "Vital signs monitoring",
+      "Medicine administration",
+      "Doctor coordination support"
+    ]
+  }
+]

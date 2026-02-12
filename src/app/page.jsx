@@ -1,9 +1,16 @@
+import Banner from "@/components/home/Banner";
+import Services from "@/components/home/Services";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <button className="btn btn-primary">Test Button</button>
+    <div className="space-y-10 bg-orange-100" >
+      <section>
+        <Banner/>
+      </section>
+      <section>
+        <Services/>
+      </section>
     </div>
   );
 }
