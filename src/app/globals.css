@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-   themes: light --default, dark --prefersdark;
+   themes: light , dark;
  }
 
  @plugin "daisyui/theme" {
@@ -25,4 +25,4 @@
   --color-error: oklch(62% 0.24 28);
 }
 
-@custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
+@custom-variant dark (&:where([data-theme=light], [data-theme=light] *));
