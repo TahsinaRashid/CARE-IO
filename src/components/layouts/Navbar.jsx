@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import NavLink from '../buttons/NavLink'
+import AuthButtons from '../buttons/AuthButtons';
 
 export default function Navbar() {
     const nav = (<>
@@ -32,7 +33,7 @@ export default function Navbar() {
    {nav}
   </div>
   <div className="navbar-end">
-    <Link href={"/login"} className="btn btn-primary">Login</Link>
+    <AuthButtons/>
   </div>
 </div>
     </div>

@@ -1,4 +1,5 @@
 import { getSingleService } from '@/actions/server/service';
+import BookButton from '@/components/buttons/BookButton';
 import Image from 'next/image';
 import React from 'react'
 
@@ -79,9 +80,7 @@ export default async function ServiceDetails({params}) {
                     ))}
                 </ul>
             </div>
-            <button className='btn btn-primary mt-8 w-full md:w-auto px-10 text-white'>
-                    Book This Service
-                </button>
+            <BookButton service={service}/>
         </div>
 
     </div>

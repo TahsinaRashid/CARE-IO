@@ -14,5 +14,5 @@ export const getSingleService = async (id) => {
         return null;
     const query = { _id: new ObjectId(id) };
     const service=await dbConnect(collections.SERVICES).findOne(query);
-    return service || null;
+    return {...service ,_id:service._id.toString()} || null;
 }
