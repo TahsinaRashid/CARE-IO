@@ -20,17 +20,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Care.XYZ",
+  title: {
+    default:"Care.XYZ",
+    template:"%s | Care.XYZ",
+  },
   description: "Baby Sitting & Elderly Care Service Platform",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${poppins.className} antialiased bg-orange-100`}
       >
-        <header className="py-2 md:w-11/12 mx-auto">
+        <header className="sticky top-0 z-50 py-2 md:w-11/12 mx-auto">
           <Navbar/>
         </header>
         <main className="py-2 md:w-11/12 mx-auto min-h-auto">

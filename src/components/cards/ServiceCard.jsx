@@ -1,39 +1,3 @@
-// "use client";
-
-// import Image from "next/image";
-// import { useRouter } from "next/navigation";
-
-// export default function ServiceCard({ service }) {
-//   const router = useRouter();
-
-//   const handleClick = () => {
-//     router.push(`/services/${service._id || service.name}`);
-//   };
-//   return (
-//     <div
-//       onClick={handleClick}
-//       className="cursor-pointer border rounded-xl p-4 shadow hover:scale-105 transition-all duration-300"
-//     >
-//       <Image
-//       width={200}
-//       height={100}
-//         src={service.image}
-//         alt={service.name}
-//         className="w-full h-40 object-cover rounded-lg mb-3"
-//       />
-
-//       <h3 className="text-xl font-bold">{service.name}</h3>
-
-//       <p className="text-sm my-2 line-clamp-2">
-//         {service.description}
-//       </p>
-
-//       <p className="font-semibold text-secondary">
-//         ৳ {service.price_hour} / hour
-//       </p>
-//     </div>
-//   );
-// }
 "use client";
 
 import Image from "next/image";
@@ -79,10 +43,8 @@ export default function ServiceCard({ service }) {
           ৳ {discountedPrice}/Hour
         </p>
         <p className="text-sm text-gray-500 line-through font-bold">
-          ৳ {originalPrice}
+          ৳ {originalPrice}/hour
         </p>
-        
-        <span className="text-[10px] text-gray-500 font-bold ">/ Hour</span>
       </div>
     </div>
   );
