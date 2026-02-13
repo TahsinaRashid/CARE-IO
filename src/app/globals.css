@@ -1,28 +1,43 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-   themes: light , dark;
- }
 
- @plugin "daisyui/theme" {
+@plugin "daisyui" {
+  /* আমরা light এবং dracula দুটি থিমই রাখছি */
+  themes: light, dracula; 
+}
+
+@plugin "daisyui/theme" {
   name: "light";
   default: true;
-   /* Brand */
+  /* তোমার অরিজিনাল লাইট মোড কালারগুলো */
   --color-primary: oklch(65% 0.23 35);
   --color-secondary: oklch(58% 0.18 30);
   --color-accent: oklch(72% 0.20 55);
-
-  /* Base */
   --color-base-100: oklch(100% 0 0);
   --color-base-200: oklch(97% 0.01 95);
   --color-base-300: oklch(92% 0.015 95);
-
-  /* Neutral */
   --color-neutral: oklch(35% 0.01 260);
   --color-neutral-content: oklch(96% 0 0);
-
-  /* Feedback */
   --color-success: oklch(70% 0.17 145);
   --color-error: oklch(62% 0.24 28);
 }
 
-@custom-variant dark (&:where([data-theme=light], [data-theme=light] *));
+@plugin "daisyui/theme" {
+  name: "dracula";
+  /* Dracula Unique Colors */
+  --color-primary: oklch(70% 0.19 340);    /* সফট পিঙ্ক/পার্পল */
+  --color-secondary: oklch(65% 0.2 290);   /* ভায়োলেট */
+  --color-accent: oklch(85% 0.15 160);    /* নিয়ন গ্রিন */
+  
+  /* Base Colors (Deep Night Theme) */
+  --color-base-100: oklch(25% 0.02 260);  /* ড্রাকুলা ব্যাকগ্রাউন্ড */
+  --color-base-200: oklch(20% 0.02 260);  
+  --color-base-300: oklch(15% 0.02 260);
+  
+  /* Content & Text */
+  --color-base-content: oklch(95% 0.01 260); /* উজ্জ্বল টেক্সট */
+  --color-neutral: oklch(35% 0.05 260);
+  --color-neutral-content: oklch(98% 0 0);
+}
+
+/* এই লাইনটি ঠিক করা হয়েছে: ড্রাকুলা থিম অ্যাক্টিভ হলে ডার্ক ভ্যারিয়েন্ট কাজ করবে */
+@custom-variant dark (&:where([data-theme=dracula], [data-theme=dracula] *));
