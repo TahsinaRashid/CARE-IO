@@ -21,10 +21,33 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default:"Care.XYZ",
-    template:"%s | Care.XYZ",
+    default: "CARE-IO ",
+    template: "%s | CARE-IO",
   },
-  description: "Baby Sitting & Elderly Care Service Platform",
+  description: "Get premium professional services with up to 15% discount. We care for you, your home, and your loved ones.",
+  metadataBase: new URL('https://careio-nine.vercel.app'), // তোমার ভেরসেল লিঙ্কটি এখানে দাও
+  openGraph: {
+    title: "CARE-IO",
+    description: "Explore our wide range of services including Baby Care, Elderly Care, and more.",
+    url: "https://careio-nine.vercel.app",
+    siteName: "CARE-IO",
+    images: [
+      {
+        url: "https://i.postimg.cc/sxhyvkrC/Screenshot-2026-02-13-212337.png", // হোমপেজ প্রিভিউ লিঙ্ক
+        width: 1200,
+        height: 630,
+        alt: "CARE-IO Homepage Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CARE-IO | Professional Services",
+    description: "Book your service today and enjoy a 15% discount!",
+    images: ["https://i.postimg.cc/sxhyvkrC/Screenshot-2026-02-13-212337.png"],
+  },
 };
 
 export default function RootLayout({ children }) {

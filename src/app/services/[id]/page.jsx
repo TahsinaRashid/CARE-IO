@@ -2,6 +2,23 @@ import { getSingleService } from '@/actions/server/service';
 import Image from 'next/image';
 import React from 'react'
 
+export const metadata = {
+  title: "Our Services",
+  description: "Check out our specialized care services. Quality service guaranteed with 15% off.",
+  openGraph: {
+    title: "Explore Services | CARE-IO",
+    description: "From Baby Care to Sick People Care, find the help you need.",
+    images: [
+      {
+        url: "https://i.postimg.cc/y8PJ1ZjR/Screenshot-2026-02-13-212412.png", // সার্ভিস পেজ প্রিভিউ লিঙ্ক
+        width: 1200,
+        height: 630,
+        alt: "CARE-IO Services Preview",
+      },
+    ],
+  },
+};
+
 export default async function ServiceDetails({params}) {
     const {id}=await params;
     const service = await getSingleService(id);
