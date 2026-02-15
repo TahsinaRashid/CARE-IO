@@ -8,6 +8,7 @@ export default function Navbar() {
     <li className='flex justify-between items-center gap-5'>
         <NavLink href={"/"}>Home</NavLink>
         <NavLink href={"/services"}>Services</NavLink>
+        <NavLink href={"/my-bookings"}>Bookings</NavLink>
         <NavLink href={"/about"}>About Us</NavLink>
         <NavLink href={"/contact"}>Contact</NavLink>
     </li>

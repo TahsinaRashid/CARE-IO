@@ -108,16 +108,16 @@ export default function RootLayout({ children }) {
 
   return (
 
-    <NextAuthProvider>
+    
       <html lang="en" suppressHydrationWarning>
+        
 
       <body
 
         className={`${poppins.className} antialiased bg-orange-100`}
 
       >
-
-
+        <NextAuthProvider>
 
          <header className="sticky top-0 z-50 py-2 md:w-11/12 mx-auto">
 
@@ -138,11 +138,11 @@ export default function RootLayout({ children }) {
           <Footer/>
 
         </footer>
-
+         </NextAuthProvider>
       </body>
-
+        
     </html>
-    </NextAuthProvider>
+ 
 
   );
 

@@ -1,11 +1,14 @@
 'use client';
 
 import { postUser } from "@/actions/server/auth";
+import { signIn } from "next-auth/react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 export const RegisterForm = () => {
+    const params=useSearchParams();
+    const callBackUrl=params.get("callbackUrl") || "/";
     const router = useRouter();
     const [form, setform] = useState({
         nid_no: "",
@@ -44,8 +47,9 @@ export const RegisterForm = () => {
             console.error("Registration Error:", error);
             alert("Something went wrong!");
         }
-    router.push('/booking');
-
+    
+    const result = await signIn("credentials",{email:form.email,password:form.password,callbackUrl:callBackUrl});
+     
     };
 
     return (

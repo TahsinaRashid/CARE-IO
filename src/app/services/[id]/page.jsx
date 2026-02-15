@@ -60,7 +60,7 @@ export default async function ServiceDetails({params}) {
                 </span>
                 {discount > 0 && (
                     <span className='line-through text-gray-500 ml-3'>
-                       ৳ {price_hour} / hour 
+                        ৳ {price_hour} / hour 
                     </span>
                 )}
 

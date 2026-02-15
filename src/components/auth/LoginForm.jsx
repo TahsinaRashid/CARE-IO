@@ -1,11 +1,14 @@
 "use client";
 import { signIn } from "next-auth/react"
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
 export const LoginForm = () => {
+  //const router = useRouter();
+  const params=useSearchParams();
+  const callbackUrl=params.get("callbackUrl") || "/";
     const router=useRouter();
     const [form,setform]=useState({
         email:"",
@@ -20,14 +23,17 @@ export const LoginForm = () => {
     const result = await signIn("credentials",{
         email:form.email,
         password:form.password  ,
-        redirect:false});
+        redirect:false,
+        callbackUrl: params.get("callbackUrl") || "/",
+      });
+        
         console.log(result);
         if(!result.ok){
             Swal.fire("Error","Invalid email or password.","error");
         }
         else{
             Swal.fire("Success","Login successful!","success");
-            router.push("/");
+           router.push (callbackUrl);
 
         }
 
